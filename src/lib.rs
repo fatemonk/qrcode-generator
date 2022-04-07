@@ -461,7 +461,7 @@ fn to_png_to_vec_inner(qr: QrCode, size: usize) -> Result<Vec<u8>, QRCodeError> 
 
 #[cfg(feature = "image")]
 #[inline]
-fn to_png_to_file_inner<P: AsRef<Path>>(
+pub fn to_png_to_file_inner<P: AsRef<Path>>(
     qr: QrCode,
     size: usize,
     path: P,
